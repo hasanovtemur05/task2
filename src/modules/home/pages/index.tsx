@@ -3,8 +3,8 @@ import { useGetData } from "../hooks/queries";
 
 const Index = () => {
   const { data, isLoading, error } = useGetData();
-  if (isLoading) return <p className="text-center text-[40px] text-green-500 mt-[30%]">Loading...</p>;
-  if (error) return <p className="text-center text-[40px] text-red-500 mt-[30%]">Error loading data!</p>;
+  if (isLoading) return <p className="text-center text-[40px] text-green-500 mt-[200px]">Loading...</p>;
+  if (error) return <p className="text-center text-[40px] text-red-500 mt-[200px]">Error loading data!</p>;
 
   const rows = data || [];
   console.log(rows);

@@ -1,17 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Table, TableHeader, TableBody, Column, Row, Cell } from 'react-aria-components';
-
-interface ColumnType {
-  id: string;
-  title: string;
-  isRowHeader?: boolean;
-}
-
-interface GlobalTableProps {
-  columns: ColumnType[];
-  rows: any[];
-  tableProps?: React.HTMLAttributes<HTMLTableElement>;
-}
+import { GlobalTableProps } from './types';
 
 const GlobalTable = ({ columns, rows, tableProps }: GlobalTableProps) => {
   return (
