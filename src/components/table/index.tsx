@@ -16,7 +16,7 @@ const GlobalTable = ({ columns, rows, tableProps }: GlobalTableProps) => {
           <Row key={rowIndex} className="hover:bg-gray-50">
             {columns.map((column) => (
               <Cell key={column.id} className="px-4 py-2 border">
-                {row[column.id] || []} 
+                {column.render ? column.render(row) : row[column.id]} 
               </Cell>
             ))}
           </Row>
